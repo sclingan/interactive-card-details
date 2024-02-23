@@ -28,3 +28,53 @@ header {
     background-color: var(--linear);
     background-image: url('../public/images/bg-main-mobile.png');
 }
+
+section {
+    padding-block: 2rem;
+}
+
+form {
+}
+
+label {
+    margin-bottom: 0.5rem;
+}
+
+input {
+    display: block;
+    margin-block: 0.5rem;
+}
+
+::placeholder {
+    padding-left: 0.5rem;
+}
+
+#MM {
+    max-width: 4rem;
+    grid-column: 1/1;
+    grid-row: 2/2;
+}
+
+#YY {
+    max-width: 4rem;
+    grid-column: 1/2;
+    grid-row: 2/2;
+    margin-left: 4.5rem;
+}
+
+#cvc-label {
+    grid-column: 2/3;
+    grid-row: 1/1;
+}
+
+#cvc {
+    max-width: 7rem;
+    grid-column: 2/3;
+    grid-row: 2/2;
+}
+
+.exp {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
