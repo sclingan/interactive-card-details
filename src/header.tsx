@@ -6,8 +6,8 @@ function Header() {
 
   return (
     <header>
-        <img src={cardBack} alt=""></img>
-        <img src={cardFront} alt=""></img>
+        <img src={cardBack} alt="" className='card-back'></img>
+        <img src={cardFront} alt="" className='card-front'></img>
          0000 0000 0000 0000
          Jane Appleseed
          00/00
