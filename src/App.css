@@ -12,6 +12,10 @@
     --fw: 500;
 }
 
+/* TODO:  
+     fix input alignment
+*/
+
 body {
     display: flex;
     flex-direction: column;
@@ -28,6 +32,7 @@ main {
 
 header {
     background-color: var(--linear);
+    color: var(--white);
     background-image: url('../public/images/bg-main-mobile.png');
     min-height: 20rem; /* check and fix this */
 }
@@ -46,6 +51,40 @@ header {
     left: 1rem;
 }
 
+.card-logo {
+    max-width: 20%;
+    padding-bottom: 2.5rem;
+}
+
+.cvc-icon {
+    position: absolute;
+    top: 5.8rem;
+    left: 18.9rem;
+    font-size: 0.7rem;
+}
+
+.card-info {
+    position: absolute;
+    top: 8rem;
+    left: 2rem;
+    min-width: 17rem;
+}
+
+.card-number {
+    padding-top: 0;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.195rem;
+    text-align: justify;
+}
+
+.card-user {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    padding-right: 1rem;
+}
+
 section {
     padding-block: 2rem;
     padding-inline: 1rem;
@@ -58,6 +97,8 @@ form {
 label {
     text-transform: uppercase;
     margin-bottom: 0.8rem;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
 }
 
 input {
