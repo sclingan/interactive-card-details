@@ -19,7 +19,6 @@
 body {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     font-size: var(--font-size);
     font-family: var(--ff);
@@ -139,6 +138,7 @@ input {
     grid-column: 2/3;
     grid-row: 2/2;
     margin-left: 0.5rem;
+    max-width: 10.3125rem;
 }
 
 .exp {
