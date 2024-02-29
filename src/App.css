@@ -159,3 +159,31 @@ button {
     border-radius: 0.5rem;
     margin-block: 1rem;
 }
+
+@media(min-width: 40rem) {
+   
+  body {
+    flex-direction: row;
+  }
+
+  main {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header {
+  }
+
+  .card-back {
+    position: fixed;
+  }
+
+  .card-front {
+    z-index: 2;
+  }
+
+  section {
+  }
+}
