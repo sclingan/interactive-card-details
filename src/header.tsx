@@ -7,8 +7,12 @@ function Header() {
 
   return (
     <header>
+      <div className='card-container'>
         <img src={cardBack} alt="" className='card-back'></img>
+        </div>
+        <div className='card-container-front'>
         <img src={cardFront} alt="" className='card-front'></img>
+        </div>
         <div className='card-info'>
           <img src={cardLogo} alt="" className='card-logo'></img>
            <p className='card-number'>0000 0000 0000 0000</p>

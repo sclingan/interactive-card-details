@@ -163,27 +163,41 @@ button {
 @media(min-width: 40rem) {
    
   body {
-    flex-direction: row;
+    display: inline;
+    /* flex-direction: row; */
   }
 
   main {
     display: flex; 
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
+    /* margin-inline: 2rem; */
+    /* margin-top: 5rem; */
   }
 
   header {
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 4rem;    */
+    min-width: 30%;
+    min-height: 70rem;
   }
 
   .card-back {
-    position: fixed;
+    position: relative;
   }
 
   .card-front {
-    z-index: 2;
+    position: relative;
   }
 
   section {
+    min-width: 60%;
+    /* align-items: center; */
+    /* justify-content: center; */
+    padding-inline: 20rem;
+    margin-top: 0;
+    padding-top: 0;
   }
 }
