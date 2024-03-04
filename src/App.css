@@ -33,21 +33,33 @@ header {
     background-color: var(--linear);
     color: var(--white);
     background-image: url('../public/images/bg-main-mobile.png');
-    min-height: 20rem; /* check and fix this */
+    padding-inline: 2rem;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    align-content: last baseline;
+    justify-content: end;
+    padding-block: 5rem;
+}
+
+.card-container-front {
+    display: flex;
+    flex-direction: row;
+    align-content: last baseline;
+    justify-content: end;
 }
 
 .card-back {
-    position: absolute;
-    max-width: 80%;
-    top: 1.2rem;
-    left: 4rem;
+    padding-left: 3rem;
 }
 
 .card-front {
     position: absolute;
+    top: 16rem;
+    left: 0.5rem;
     max-width: 80%;
-    top: 7rem;
-    left: 1rem;
 }
 
 .card-logo {
@@ -163,41 +175,26 @@ button {
 @media(min-width: 40rem) {
    
   body {
-    display: inline;
-    /* flex-direction: row; */
   }
 
   main {
     display: flex; 
     flex-direction: row;
     align-items: center;
-    /* justify-content: center; */
-    /* margin-inline: 2rem; */
-    /* margin-top: 5rem; */
   }
 
   header {
     display: flex;
-    flex-direction: column;
-    /* margin-top: 4rem;    */
-    min-width: 30%;
+    flex-direction: column-reverse;
     min-height: 70rem;
   }
 
-  .card-back {
-    position: relative;
-  }
-
-  .card-front {
-    position: relative;
-  }
-
   section {
-    min-width: 60%;
-    /* align-items: center; */
-    /* justify-content: center; */
-    padding-inline: 20rem;
-    margin-top: 0;
-    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
   }
 }
