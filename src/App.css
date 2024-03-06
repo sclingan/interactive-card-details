@@ -172,7 +172,7 @@ button {
     margin-block: 1rem;
 }
 
-@media(min-width: 40rem) {
+@media(min-width: 56.25rem) { /* 40rem */
    
   body {
   }
@@ -187,14 +187,33 @@ button {
     display: flex;
     flex-direction: column-reverse;
     min-height: 70rem;
+    /* margin: 0 auto; */
   }
 
   section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     margin: 0 auto;
-    padding: 0;
+    min-width: 30rem;
+    position: relative;
+  }
+
+  .card-container {
+    min-width: 25rem;
+    margin: 0 auto;
+  }
+
+  .card-back {
+    position: absolute;
+    top: 40rem;
+    right: 45rem;
+  }
+
+  .card-front {
+    position: absolute;
+    top: 15rem;
+    /* right: 20rem; */
+    left: 5rem;
   }
 }
