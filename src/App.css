@@ -14,6 +14,7 @@
 
 /* TODO:  
      fix input alignment
+     fix desktop background/picture element??
 */
 
 body {
@@ -24,9 +25,6 @@ body {
     font-family: var(--ff);
     font-weight: var(--fw);
     padding-block: 2rem;
-}
-
-main {
 }
 
 header {
@@ -69,14 +67,14 @@ header {
 
 .cvc-icon {
     position: absolute;
-    top: 5.8rem;
-    left: 18.9rem;
+    top: 14.5rem;
+    right: 5rem;
     font-size: 0.7rem;
 }
 
 .card-info {
     position: absolute;
-    top: 8rem;
+    top: 17.8rem;
     left: 2rem;
     min-width: 17rem;
 }
@@ -100,9 +98,6 @@ section {
     padding-block: 2rem;
     padding-inline: 1rem;
     padding-top: 5rem;
-}
-
-form {
 }
 
 label {
@@ -172,11 +167,8 @@ button {
     margin-block: 1rem;
 }
 
-@media(min-width: 56.25rem) { /* 40rem */
+@media(min-width: 64rem) { 
    
-  body {
-  }
-
   main {
     display: flex; 
     flex-direction: row;
@@ -187,7 +179,6 @@ button {
     display: flex;
     flex-direction: column-reverse;
     min-height: 70rem;
-    /* margin: 0 auto; */
   }
 
   section {
@@ -206,14 +197,38 @@ button {
 
   .card-back {
     position: absolute;
-    top: 40rem;
-    right: 45rem;
+    top: 32rem;
+    left: 4rem;
   }
 
   .card-front {
     position: absolute;
     top: 15rem;
-    /* right: 20rem; */
-    left: 5rem;
+    left: 4rem;
   }
+
+  .card-info {
+    left: 6rem;
+    top: 17rem;
+    font-size: var(--font-size);
+  }
+  
+  .card-logo {
+    padding-bottom: 5rem;
+  }
+
+  .card-number {
+    font-size: 1.8rem;
+  }
+}
+
+@media(min-width: 73.75rem) {
+
+    .card-back {
+        left: 9rem;
+    }
+
+    .card-front {
+        left: 8rem;
+    }
 }
