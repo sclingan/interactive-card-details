@@ -14,7 +14,7 @@
 
 /* TODO:  
      fix input alignment
-     fix desktop background/picture element??
+     form validation and error text
 */
 
 body {
@@ -115,6 +115,7 @@ input {
     margin-bottom: 1rem;
     margin-top: 0.5rem;
     border: solid 0.1rem var(--light-gray-violet);
+    cursor: pointer;
 }
 
 ::placeholder {
@@ -179,6 +180,9 @@ button {
     display: flex;
     flex-direction: column-reverse;
     min-height: 70rem;
+    background-image: url('../public/images/bg-main-desktop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   section {
@@ -220,6 +224,12 @@ button {
   .card-number {
     font-size: 1.8rem;
   }
+
+  .cvc-icon {
+    top: 38.6rem;
+    left: 28.5rem;
+    font-size: 1.4rem;
+  }
 }
 
 @media(min-width: 73.75rem) {
@@ -230,5 +240,13 @@ button {
 
     .card-front {
         left: 8rem;
+    }
+
+    .card-info {
+        left: 9.5rem;
+    }
+
+    .cvc-icon {
+        left: 34rem;
     }
 }
