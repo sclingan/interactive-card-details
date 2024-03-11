@@ -1,3 +1,4 @@
+import log from '../src/validate'
 
 function Section() {
 
@@ -15,7 +16,7 @@ function Section() {
             <label htmlFor="cvc" id='cvc-label'>CVC</label>
             <input type='number' name='cvc' id='cvc' placeholder="e.g. 123"></input>
             </div>
-            <button>Confirm</button>
+            <button onClick={log}>Confirm</button>
         </form>
     </section>
   )
