@@ -114,6 +114,7 @@ input {
     padding-block: 0.8rem;
     margin-bottom: 1rem;
     margin-top: 0.5rem;
+    padding-left: 1rem;
     border: solid 0.1rem var(--light-gray-violet);
     cursor: pointer;
 }
@@ -166,6 +167,7 @@ button {
     padding-block: 0.8rem;
     border-radius: 0.5rem;
     margin-block: 1rem;
+    cursor: pointer;
 }
 
 @media(min-width: 64rem) { 
@@ -229,6 +231,10 @@ button {
     top: 38.6rem;
     left: 28.5rem;
     font-size: 1.4rem;
+  }
+
+  form {
+    min-width: 23rem;
   }
 }
 
