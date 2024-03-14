@@ -15,6 +15,9 @@
 /* TODO:  
      fix input alignment
      form validation and error text
+     fix cvc text on mobile sizes < 400
+     fix cvc error text placement
+     add cc number error for invalid char
 */
 
 body {
@@ -55,7 +58,7 @@ header {
 
 .card-front {
     position: absolute;
-    top: 16rem;
+    top: 12rem;
     left: 0.5rem;
     max-width: 80%;
 }
@@ -107,12 +110,16 @@ label {
     letter-spacing: 1px;
 }
 
+form {
+    position: relative;
+}
+
 input {
     display: block;
     width: 100%;
     border-radius: 0.5rem;
     padding-block: 0.8rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     margin-top: 0.5rem;
     padding-left: 1rem;
     border: solid 0.1rem var(--light-gray-violet);
@@ -122,6 +129,27 @@ input {
 ::placeholder {
     padding-left: 0.5rem;
     color: var(--light-gray-violet);
+}
+
+.error {
+    position: absolute;
+    top: 13.5rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--red);
+}
+
+#name-blank {
+    top: 5.8rem;
+}
+
+#exp-month-blank {
+    top: 20.8rem;
+}
+
+#cvc-blank {
+    top: 20.8rem;
+    right: 16rem;
 }
 
 #MM {
@@ -168,6 +196,15 @@ button {
     border-radius: 0.5rem;
     margin-block: 1rem;
     cursor: pointer;
+}
+
+.sr-only {
+    position: absolute ;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    top: auto;
+    overflow: hidden;
 }
 
 @media(min-width: 64rem) { 
