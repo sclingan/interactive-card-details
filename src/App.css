@@ -148,8 +148,10 @@ input {
 }
 
 #cvc-blank {
-    top: 20.8rem;
-    right: 16rem;
+    position: absolute;
+    top: 21rem;
+    /* left: 65%; */
+    left: 63%;
 }
 
 #MM {
@@ -172,6 +174,7 @@ input {
 }
 
 #cvc {
+    position: relative;
     grid-column: 2/3;
     grid-row: 2/2;
     margin-left: 0.5rem;
@@ -273,6 +276,11 @@ button {
   form {
     min-width: 23rem;
   }
+
+  #cvc-blank {
+    top: 20.8rem;
+    left: 14.5rem;
+}
 }
 
 @media(min-width: 73.75rem) {
