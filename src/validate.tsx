@@ -15,23 +15,31 @@ export default function log(e: Event) {
     if(name.value === ''){
         document.getElementById('name-blank')?.classList.remove('sr-only');
         document.getElementById('name-blank')?.classList.add('error');
+    }else{
+    document.getElementById('name-blank')?.classList.remove('error');
+    document.getElementById('name-blank')?.classList.add('sr-only');
     }
-    console.log(name.value);
 
     /* check that number is 16char long and all numbers */
     if(numbers === ''){
         document.getElementById('number-blank')?.classList.remove('sr-only');
         document.getElementById('number-blank')?.classList.add('error');
     }else{
+        document.getElementById('number-blank')?.classList.remove('error');
+        document.getElementById('number-blank')?.classList.add('sr-only');
         if(numbers.length < 16) {
             console.log('not enough numbers');
         }else{
             if(/^\d+$/.test(numbers)){
                 console.log('true')
-            }else{
-                console.log('failed');
-            }
+                document.getElementById('error-format')?.classList.remove('error');
+                document.getElementById('error-format')?.classList.add('sr-only');
+        }else{
+            console.log('failed');
+            document.getElementById('error-format')?.classList.remove('sr-only');
+            document.getElementById('error-format')?.classList.add('error');
         }
+    }
     }
 
     /* check exp date is not empty and numbers only */
@@ -40,6 +48,8 @@ export default function log(e: Event) {
         document.getElementById('exp-month-blank')?.classList.add('error');
         
     }else{
+        document.getElementById('exp-month-blank')?.classList.remove('error');
+        document.getElementById('exp-month-blank')?.classList.add('sr-only');
         if(expMonth.length < 2){
             console.log('error numbers exp');
         }
@@ -60,6 +70,8 @@ export default function log(e: Event) {
         document.getElementById('cvc-blank')?.classList.remove('sr-only');
         document.getElementById('cvc-blank')?.classList.add('error');
     }else{
+        document.getElementById('cvc-blank')?.classList.remove('error');
+        document.getElementById('cvc-blank')?.classList.add('sr-only');
         if(cvc.length < 3 || cvc.length > 3){
             console.log('not enough cvc');
         }
