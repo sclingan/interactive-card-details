@@ -1,4 +1,5 @@
 import log from '../src/validate'
+import validate from '../src/validate2'
 
 function Section() {
 
@@ -22,7 +23,7 @@ function Section() {
             <input type='number' name='cvc' id='cvc' placeholder="e.g. 123" min='000' max='999'></input>
             <p className='sr-only' id='cvc-blank'>Can't be blank</p>
             </div>
-            <button onClick={log}>Confirm</button>
+            <button onClick={validate}>Confirm</button>
         </form>
     </section>
   )
