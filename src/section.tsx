@@ -15,10 +15,10 @@ function Section() {
             <p className='sr-only' id='number-blank'>Can't be blank</p>
             <div className="exp">
             <label htmlFor="exp-date">Exp. Date (MM/YY)</label>
-            <input type='number' name='exp-date' id='MM' placeholder="MM" min='0' max='12'></input>
-            <p className='sr-only' id='exp-month-blank'>Can't be blank</p>
-            <input type='number' id='YY' placeholder="YY" min='00' max='99'></input>
-            <p className='sr-only' id='exp-year-blank'>Can't be blank</p>
+            <input type='number' name='exp-date' id='exp-date' placeholder="MM" min='0' max='12'></input>
+            <p className='sr-only' id='exp-date-blank'>Can't be blank</p>
+            <input type='number' id='exp-date-year' name='exp-date-year' placeholder="YY" min='00' max='99'></input>
+            <p className='sr-only' id='exp-date-year-blank'>Can't be blank</p>
             <label htmlFor="cvc" id='cvc-label'>CVC</label>
             <input type='number' name='cvc' id='cvc' placeholder="e.g. 123" min='000' max='999'></input>
             <p className='sr-only' id='cvc-blank'>Can't be blank</p>

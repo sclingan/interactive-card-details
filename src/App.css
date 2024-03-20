@@ -143,7 +143,11 @@ input {
     top: 5.8rem;
 }
 
-#exp-month-blank {
+#exp-date-blank {
+    top: 20.8rem;
+}
+
+#exp-date-year-blank {
     top: 20.8rem;
 }
 
@@ -154,13 +158,13 @@ input {
     left: 63%;
 }
 
-#MM {
+#exp-date {
     max-width: 5rem;
     grid-column: 1/1;
     grid-row: 2/2;
 }
 
-#YY {
+#exp-date-year {
     max-width: 5rem;
     grid-column: 1/2;
     grid-row: 2/2;
