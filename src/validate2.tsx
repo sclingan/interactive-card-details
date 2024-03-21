@@ -45,11 +45,39 @@ function validate(e: Event) {
 
     function valLen(input: object){
         /* make a test for each object/diff length input */
+        /* number */
+        if(input.value.length === 16){
+            console.log('ok');
+        }else{
+            console.log('not right');
+        }
+
+        /* exp-date month */
+        if(input.value.length == 2){
+            console.log('ok');
+        }else{
+            console.log('not right');
+        }
+
+        /* exp-date-year */
+        if(input.value.length === 2){
+            console.log('ok');
+        }else{
+            console.log('not right');
+        }
+
+        /* cvc */
+        if(input.value.length === 3){
+            console.log('ok');
+        }else{
+            console.log('not right');
+        }
     }
     
 
   blank(number);
   format(number);
+  valLen(expDate);
 }
 
 

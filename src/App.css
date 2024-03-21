@@ -18,6 +18,7 @@
      fix cvc text on mobile sizes < 400
      fix cvc error text placement
      add cc number error for invalid char
+     fix sr-only , check to see if hidden is needed
 */
 
 body {
