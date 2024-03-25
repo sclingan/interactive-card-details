@@ -10,15 +10,16 @@ function validate(e: Event) {
     const expDate: object = document.getElementById('exp-date')!;
     const expDateYear: object = document.getElementById('exp-date-year')!;
     const cvc: object = document.getElementById('cvc')!;
+
+    const inputs = [name, number, expDate, expDateYear, cvc];
     
 
     // import variable as an object to get all properties
     function blank(input: object){
-        console.log(typeof(input));
-        console.log(input.value);
-        const inputName: string = input.name.concat('-blank');
-        console.log(inputName);
-    if(input.value === '') {
+        const name: string = input.name!;
+        const inputName: string = `${name}-blank`;
+        const value = input.value!;
+    if(value === '') {
         document.getElementById(inputName)?.classList.remove('sr-only');
         document.getElementById(inputName)?.classList.add('error');
     }else{
@@ -28,10 +29,11 @@ function validate(e: Event) {
   }
 
     function format(input: object){
-        if(input.value === ''){
+        const value = input.value!;
+        if(value === ''){
             // blank(number);
         }else{
-        if(/^\d+$/.test(input.value)){
+        if(/^\d+$/.test(value)){
             console.log('true');
             document.getElementById('error-format')?.classList.remove('error');
             document.getElementById('error-format')?.classList.add('sr-only');
@@ -42,42 +44,12 @@ function validate(e: Event) {
         }
       }
     }
-
-    function valLen(input: object){
-        /* make a test for each object/diff length input */
-        /* number */
-        if(input.value.length === 16){
-            console.log('ok');
-        }else{
-            console.log('not right');
-        }
-
-        /* exp-date month */
-        if(input.value.length == 2){
-            console.log('ok');
-        }else{
-            console.log('not right');
-        }
-
-        /* exp-date-year */
-        if(input.value.length === 2){
-            console.log('ok');
-        }else{
-            console.log('not right');
-        }
-
-        /* cvc */
-        if(input.value.length === 3){
-            console.log('ok');
-        }else{
-            console.log('not right');
-        }
-    }
-    
-
-  blank(number);
-  format(number);
-  valLen(expDate);
+    /* fix this , runs them all at once and only once */
+    /* try exporting each function, then call them onChange for input */
+   for(const element of inputs){
+       blank(element);
+       format(element);
+   }
 }
 
 
