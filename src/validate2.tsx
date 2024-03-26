@@ -44,12 +44,11 @@ function validate(e: Event) {
         }
       }
     }
-    /* fix this , runs them all at once and only once */
-    /* try exporting each function, then call them onChange for input */
+    
    for(const element of inputs){
        blank(element);
-       format(element);
    }
+   format(number);
 }
 
 
