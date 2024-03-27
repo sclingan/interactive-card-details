@@ -1,9 +1,8 @@
+import { FormEvent } from "react";
 
 
-
-
-function validate(e: Event) {
-    e.preventDefault(); 
+function validate(event: FormEvent) {
+    event.preventDefault(); 
 
     const name: object =  document.getElementById('name')!;
     const number: object = document.getElementById('number')!;
@@ -34,11 +33,9 @@ function validate(e: Event) {
             // blank(number);
         }else{
         if(/^\d+$/.test(value)){
-            console.log('true');
             document.getElementById('error-format')?.classList.remove('error');
             document.getElementById('error-format')?.classList.add('sr-only');
         }else{
-            console.log('false');
             document.getElementById('error-format')?.classList.remove('sr-only');
             document.getElementById('error-format')?.classList.add('error')
         }
@@ -49,6 +46,8 @@ function validate(e: Event) {
        blank(element);
    }
    format(number);
+
+   /* if all checks are passed , load completed page */
 }
 
 
