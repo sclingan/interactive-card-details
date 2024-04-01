@@ -3,7 +3,7 @@ import validate from '../src/validate2'
 function Section() {
 
   return (
-    <section>
+    <section id='section'>
         <form>
             <label htmlFor="name">Cardholder Name</label>
             <input type='text' name='name' id='name' placeholder="e.g. Jane Appleseed"></input>

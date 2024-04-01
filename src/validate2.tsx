@@ -48,6 +48,15 @@ function validate(event: FormEvent) {
    format(number);
 
    /* if all checks are passed , load completed page */
+   const matches = document.querySelectorAll('p.error');
+   if(matches.length === 0){
+       document.getElementById('section')?.classList.remove('section');
+       document.getElementById('section')?.classList.add('sr-only');
+       document.getElementById('aside')?.classList.remove('sr-only');
+       document.getElementById('aside')?.classList.add('complete');
+   }else {
+       console.log('fail');
+   }
 }
 
 

@@ -1,6 +1,7 @@
 import './App.css'
 import Section from './section'
 import Header from './header'
+import Complete from './complete'
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <main>
       <Header />
       <Section />
+      <Complete />
     </main>
   )
 }
