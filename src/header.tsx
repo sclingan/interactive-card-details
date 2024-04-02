@@ -8,13 +8,13 @@ function Header() {
   return (
     <header>
       <div className='card-container'>
-        <img src={cardBack} alt="" className='card-back'></img>
+        <img src={cardBack} alt="Back side of a credit card" className='card-back'></img>
         </div>
         <div className='card-container-front'>
-        <img src={cardFront} alt="" className='card-front'></img>
+        <img src={cardFront} alt="Front side of a credit card" className='card-front'></img>
         </div>
         <div className='card-info'>
-          <img src={cardLogo} alt="" className='card-logo'></img>
+          <img src={cardLogo} alt="A white circle and a clear circle" className='card-logo'></img>
            <p className='card-number'>0000 0000 0000 0000</p>
            <div className='card-user'>
              <p>Jane Appleseed</p>

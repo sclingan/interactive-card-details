@@ -14,11 +14,10 @@
 
 /* TODO:  
      fix input alignment
-     form validation and error text
      fix cvc text on mobile sizes < 400
      fix cvc error text placement
-     add cc number error for invalid char
      fix sr-only , check to see if hidden is needed
+     fix card info on img / responsive sizes
 */
 
 body {
@@ -28,7 +27,6 @@ body {
     font-size: var(--font-size);
     font-family: var(--ff);
     font-weight: var(--fw);
-    padding-block: 2rem;
 }
 
 header {
@@ -54,12 +52,14 @@ header {
 }
 
 .card-back {
-    padding-left: 3rem;
+    /* padding-left: 3rem; */
+    padding-left: 4%;
 }
 
 .card-front {
     position: absolute;
     top: 12rem;
+    top: 22%;
     left: 0.5rem;
     max-width: 80%;
 }
@@ -71,14 +71,14 @@ header {
 
 .cvc-icon {
     position: absolute;
-    top: 14.5rem;
-    right: 5rem;
+    bottom: 78%;
+    right: 15%;
     font-size: 0.7rem;
 }
 
 .card-info {
     position: absolute;
-    top: 17.8rem;
+    bottom: 62%;
     left: 2rem;
     min-width: 17rem;
 }

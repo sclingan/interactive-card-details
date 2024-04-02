@@ -54,8 +54,6 @@ function validate(event: FormEvent) {
        document.getElementById('section')?.classList.add('sr-only');
        document.getElementById('aside')?.classList.remove('sr-only');
        document.getElementById('aside')?.classList.add('complete');
-   }else {
-       console.log('fail');
    }
 }
 
