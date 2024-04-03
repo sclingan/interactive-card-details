@@ -7,6 +7,7 @@ function Header() {
 
   return (
     <header>
+      <h1 className='sr-only'>Interactive Card Details</h1>
       <div className='card-container'>
         <img src={cardBack} alt="Back side of a credit card" className='card-back'></img>
         </div>

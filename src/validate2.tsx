@@ -19,11 +19,11 @@ function validate(event: FormEvent) {
         const inputName: string = `${name}-blank`;
         const value = input.value!;
     if(value === '') {
-        document.getElementById(inputName)?.classList.remove('sr-only');
+        document.getElementById(inputName)?.classList.remove('visually-hidden');
         document.getElementById(inputName)?.classList.add('error');
     }else{
         document.getElementById(inputName)?.classList.remove('error');
-        document.getElementById(inputName)?.classList.add('sr-only');
+        document.getElementById(inputName)?.classList.add('visually-hidden');
     }
   }
 
@@ -34,9 +34,9 @@ function validate(event: FormEvent) {
         }else{
         if(/^\d+$/.test(value)){
             document.getElementById('error-format')?.classList.remove('error');
-            document.getElementById('error-format')?.classList.add('sr-only');
+            document.getElementById('error-format')?.classList.add('visually-hidden');
         }else{
-            document.getElementById('error-format')?.classList.remove('sr-only');
+            document.getElementById('error-format')?.classList.remove('visually-hidden');
             document.getElementById('error-format')?.classList.add('error')
         }
       }
@@ -51,8 +51,8 @@ function validate(event: FormEvent) {
    const matches = document.querySelectorAll('p.error');
    if(matches.length === 0){
        document.getElementById('section')?.classList.remove('section');
-       document.getElementById('section')?.classList.add('sr-only');
-       document.getElementById('aside')?.classList.remove('sr-only');
+       document.getElementById('section')?.classList.add('visually-hidden');
+       document.getElementById('aside')?.classList.remove('visually-hidden');
        document.getElementById('aside')?.classList.add('complete');
    }
 }

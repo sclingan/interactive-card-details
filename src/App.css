@@ -13,10 +13,8 @@
 }
 
 /* TODO:  
-     fix input alignment
      fix cvc text on mobile sizes < 400
      fix cvc error text placement
-     fix sr-only , check to see if hidden is needed
      fix card info on img / responsive sizes
 */
 
@@ -52,7 +50,6 @@ header {
 }
 
 .card-back {
-    /* padding-left: 3rem; */
     padding-left: 4%;
 }
 
@@ -238,6 +235,16 @@ button {
 .complete_icon {
     margin-block: 1rem;
 }
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
 
 @media(min-width: 64rem) { 
    
