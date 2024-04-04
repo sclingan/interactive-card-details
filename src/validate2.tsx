@@ -11,13 +11,15 @@ function validate(event: FormEvent) {
     const cvc: object = document.getElementById('cvc')!;
 
     const inputs = [name, number, expDate, expDateYear, cvc];
+
+    
     
 
     // import variable as an object to get all properties
-    function blank(input: object){
+    function blank(input : object){
         const name: string = input.name!;
         const inputName: string = `${name}-blank`;
-        const value = input.value!;
+        const value: string = input.value!;
     if(value === '') {
         document.getElementById(inputName)?.classList.remove('visually-hidden');
         document.getElementById(inputName)?.classList.add('error');

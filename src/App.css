@@ -13,9 +13,10 @@
 }
 
 /* TODO:  
-     fix cvc text on mobile sizes < 400
-     fix cvc error text placement
-     fix card info on img / responsive sizes
+     fix card info on img < 356px
+     fix header on success page
+     fix complete page button size
+     fix errors on validate2
 */
 
 body {
@@ -68,14 +69,15 @@ header {
 
 .cvc-icon {
     position: absolute;
-    bottom: 78%;
-    right: 15%;
+    bottom: 78.4%;
+    right: 18%;
     font-size: 0.7rem;
 }
 
 .card-info {
     position: absolute;
-    bottom: 62%;
+    /* bottom: 62%; */
+    top: 15rem;
     left: 2rem;
     min-width: 17rem;
 }
@@ -320,8 +322,7 @@ button {
 
 .complete {
     padding-left: 15rem;
-}
-
+  }
 }
 
 @media(min-width: 73.75rem) {
