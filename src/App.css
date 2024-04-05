@@ -14,8 +14,6 @@
 
 /* TODO:  
      fix card info on img < 356px
-     fix header on success page
-     fix complete page button size
      fix errors on validate2
 */
 
@@ -33,6 +31,7 @@ header {
     color: var(--white);
     background-image: url('../public/images/bg-main-mobile.png');
     padding-inline: 2rem;
+    padding-top: 5rem;
 }
 
 .card-container {
@@ -76,7 +75,6 @@ header {
 
 .card-info {
     position: absolute;
-    /* bottom: 62%; */
     top: 15rem;
     left: 2rem;
     min-width: 17rem;
@@ -154,7 +152,6 @@ input {
 #cvc-blank {
     position: absolute;
     top: 21rem;
-    /* left: 65%; */
     left: 63%;
 }
 
@@ -219,6 +216,9 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-block: 2rem;
+    padding-inline: 1rem;
+    padding-top: 5rem;
 }
 
 .thank_you {
@@ -345,5 +345,14 @@ button {
 
     .complete {
         padding-left: 22rem;
+    }
+}
+
+@media(max-width: 360px) {
+
+    .card-info {
+        font-size: 0.7rem;
+        min-width: 3rem;
+        top: 14.5rem;
     }
 }
