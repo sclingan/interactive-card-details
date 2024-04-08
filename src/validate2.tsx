@@ -12,11 +12,14 @@ function validate(event: FormEvent) {
 
     const inputs = [name, number, expDate, expDateYear, cvc];
 
-    
+    interface object1 {
+        name: string,
+        value: string 
+    }
     
 
     // import variable as an object to get all properties
-    function blank(input : object){
+    function blank(input : object1){
         const name: string = input.name!;
         const inputName: string = `${name}-blank`;
         const value: string = input.value!;
@@ -29,7 +32,7 @@ function validate(event: FormEvent) {
     }
   }
 
-    function format(input: object){
+    function format(input: object1){
         const value = input.value!;
         if(value === ''){
             // blank(number);
@@ -47,6 +50,7 @@ function validate(event: FormEvent) {
    for(const element of inputs){
        blank(element);
    }
+
    format(number);
 
    /* if all checks are passed , load completed page */
