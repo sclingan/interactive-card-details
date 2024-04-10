@@ -13,7 +13,6 @@
 }
 
 /* TODO:  
-     fix card info on img < 356px
      fix errors on validate2
 */
 
@@ -32,21 +31,82 @@ header {
     background-image: url('../public/images/bg-main-mobile.png');
     padding-inline: 2rem;
     display: flex; 
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 .card-container-front {
     position: relative;
-    top: 8rem;
-    right: 15rem;
+    top: 2rem;
+    right: 2rem;
+    min-width: 80%;
 }
 
 .card-container {
     position: relative;
-    left: 8rem;
+    top: 8rem;
+    min-width: 80%;
 }
+
+.card-info {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 1.5rem;
+    font-size: 1rem;
+    left: 1rem;
+}
+
+.card-logo {
+    max-width: 25%;
+    padding-bottom: 2.6rem;
+}
+
+.card-number {
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+}
+
+.card-user {
+    display: flex;
+    flex-direction: row;
+    gap: 4.5rem;
+    padding-top: 0.5rem;
+}
+
+/* Adjust text for responsive sizes */
+@media(min-width: 430px) {
+
+    .card-logo {
+        padding-bottom: 3.5rem;
+    }
+
+    .card-number {
+        font-size: 1.6rem;
+    }
+
+    .card-user {
+        gap: 8.8rem;
+    }
+}
+
+/* Adjust text for smaller screens */
+@media(max-width: 350px) {
+
+    .card-info {
+        font-size: 0.5rem;
+    }
+
+    .card-number {
+        font-size: 0.6rem;
+    }
+
+    .card-logo {
+        padding-bottom: 2.5rem;
+    }
+}
+
 
 section {
     padding-block: 2rem;
@@ -201,103 +261,13 @@ button {
     width: 1px;
   }
 
-@media(min-width: 64rem) { 
-   
-  main {
-    display: flex; 
-    flex-direction: row;
-    align-items: center;
-  }
+  /* Desktop */
+  @media(min-width: 50rem) {
 
-  header {
-    display: flex;
-    flex-direction: column-reverse;
-    min-height: 70rem;
-    background-image: url('../public/images/bg-main-desktop.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    min-width: 30rem;
-    position: relative;
-  }
-
-  .card-container {
-    min-width: 25rem;
-    margin: 0 auto;
-  }
-
-  .card-back {
-    position: absolute;
-    top: 32rem;
-    left: 4rem;
-  }
-
-  .card-front {
-    position: absolute;
-    top: 15rem;
-    left: 4rem;
-  }
-
-  .card-info {
-    left: 6rem;
-    top: 17rem;
-    font-size: var(--font-size);
-  }
-  
-  .card-logo {
-    padding-bottom: 5rem;
-  }
-
-  .card-number {
-    font-size: 1.8rem;
-  }
-
-  .cvc-icon {
-    top: 38.6rem;
-    left: 28.5rem;
-    font-size: 1.4rem;
-  }
-
-  form {
-    min-width: 23rem;
-  }
-
-  #cvc-blank {
-    top: 20.8rem;
-    left: 14.5rem;
-}
-
-.complete {
-    padding-left: 15rem;
-  }
-}
-
-@media(min-width: 73.75rem) {
-
-    .card-back {
-        left: 9rem;
+    main {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
     }
-
-    .card-front {
-        left: 8rem;
-    }
-
-    .card-info {
-        left: 9.5rem;
-    }
-
-    .cvc-icon {
-        left: 34rem;
-    }
-
-    .complete {
-        padding-left: 22rem;
-    }
-}
-
+  }
