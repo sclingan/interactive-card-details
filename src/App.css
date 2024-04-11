@@ -14,12 +14,12 @@
 
 /* TODO:  
      fix errors on validate2
+     add active state to form/ red outline on inputs
 */
 
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     font-size: var(--font-size);
     font-family: var(--ff);
     font-weight: var(--fw);
@@ -33,7 +33,6 @@ header {
     display: flex; 
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 .card-container-front {
@@ -264,10 +263,26 @@ button {
   /* Desktop */
   @media(min-width: 50rem) {
 
+    body {
+        justify-content: center;
+    }
+    
     main {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
+    }
+
+    .card-container-front {
+        top: -16rem;
+    }
+
+    .card-container {
+        top: 18rem;
+        left: 5rem;
+    }
+
+    section {
+        min-width: 20rem;
+        margin-left: 3rem;
     }
   }
