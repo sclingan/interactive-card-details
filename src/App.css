@@ -265,11 +265,15 @@ button {
 
     body {
         justify-content: center;
+
     }
-    
+
     main {
-        display: flex;
-        justify-content: space-between;
+        display: flex; 
+        justify-content: space-evenly;
+    }
+
+    header {
     }
 
     .card-container-front {
