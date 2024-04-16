@@ -29,6 +29,8 @@ header {
     background-color: var(--linear);
     color: var(--white);
     background-image: url('../public/images/bg-main-mobile.png');
+    background-repeat: no-repeat;
+    background-size: contain;
     padding-inline: 2rem;
     display: flex; 
     flex-direction: column;
@@ -74,6 +76,13 @@ header {
     padding-top: 0.5rem;
 }
 
+.cvc-icon {
+    position: relative;
+    top: -6rem;
+    left: 13rem;
+    color: blue;
+}
+
 /* Adjust text for responsive sizes */
 @media(min-width: 430px) {
 
@@ -87,6 +96,12 @@ header {
 
     .card-user {
         gap: 8.8rem;
+    }
+
+    .cvc-icon {
+        top: -8.5rem;
+        left: 20rem;
+        color: red;
     }
 }
 
@@ -103,6 +118,13 @@ header {
 
     .card-logo {
         padding-bottom: 2.5rem;
+    }
+
+    .cvc-icon {
+        top: -5.5rem;
+        left: 13rem;
+        font-size: 1rem;
+        color: orange;
     }
 }
 
@@ -265,15 +287,16 @@ button {
 
     body {
         justify-content: center;
-
     }
 
     main {
-        display: flex; 
+        display: flex;
         justify-content: space-evenly;
+        align-items: center;
     }
 
     header {
+        background-size: cover;
     }
 
     .card-container-front {
@@ -285,7 +308,14 @@ button {
         left: 5rem;
     }
 
+    .cvc-icon {
+        top: -8rem;
+        left: 18rem;
+        color: yellow;
+    }
+
     section {
+        background-color: var(--white);
         min-width: 20rem;
         margin-left: 3rem;
     }
