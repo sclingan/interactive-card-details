@@ -272,12 +272,14 @@ button {
     main {
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        /* gap: 10%; */
+        gap: 8%;
     }
 
     header {
         background-size: cover;
-        /* min-width: 50%; */
+        min-height: 85rem;
+        min-width: 50%;
     }
 
     .card-container-front {
@@ -290,9 +292,15 @@ button {
     }
 
     section {
-        background-color: var(--white);
         min-width: 20rem;
-        /* min-width: 50%; */
-        margin-left: 3rem;
+        margin-inline: 3rem;
+        margin-top: 22rem;
+    }
+
+    .cvc-icon {
+        position: relative;
+        /* top: -8.5rem; */
+        bottom: 8.5rem;
+        left: 15rem
     }
   }
