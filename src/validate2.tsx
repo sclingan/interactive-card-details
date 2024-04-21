@@ -26,8 +26,10 @@ function validate(event: FormEvent) {
     if(value === '') {
         document.getElementById(inputName)?.classList.remove('visually-hidden');
         document.getElementById(inputName)?.classList.add('error');
+        document.getElementById(name)?.classList.add('error-outline');
     }else{
         document.getElementById(inputName)?.classList.remove('error');
+        document.getElementById(name)?.classList.remove('error-outline');
         document.getElementById(inputName)?.classList.add('visually-hidden');
     }
   }
@@ -39,15 +41,19 @@ function validate(event: FormEvent) {
         }else{
         if(/^\d+$/.test(value)){
             document.getElementById('error-format')?.classList.remove('error');
+            document.getElementById(input.name)?.classList.remove('error-outline');
             document.getElementById('error-format')?.classList.add('visually-hidden');
         }else{
             document.getElementById('error-format')?.classList.remove('visually-hidden');
             document.getElementById('error-format')?.classList.add('error')
+            document.getElementById(input.name)?.classList.add('error-outline');
         }
       }
     }
+
     
-   for(const element of inputs){
+   for( const element of inputs){
+    /* Not sure how to fix this error */
        blank(element);
    }
 

@@ -12,11 +12,6 @@
     --fw: 500;
 }
 
-/* TODO:  
-     fix errors on validate2
-     add active state to form/ red outline on inputs
-*/
-
 body {
     font-size: var(--font-size);
     font-family: var(--ff);
@@ -75,38 +70,6 @@ header {
     padding-top: 0.5rem;
 }
 
-/* Adjust text for responsive sizes */
-@media(min-width: 430px) {
-
-    .card-logo {
-        padding-bottom: 3.5rem;
-    }
-
-    .card-number {
-        font-size: 1.6rem;
-    }
-
-    .card-user {
-        gap: 8.8rem;
-    }
-}
-
-/* Adjust text for smaller screens */
-@media(max-width: 350px) {
-
-    .card-info {
-        font-size: 0.5rem;
-    }
-
-    .card-number {
-        font-size: 0.6rem;
-    }
-
-    .card-logo {
-        padding-bottom: 2.5rem;
-    }
-}
-
 section {
     padding-block: 2rem;
     padding-inline: 1rem;
@@ -147,6 +110,10 @@ input {
     font-size: 0.8rem;
     margin-bottom: 0.5rem;
     color: var(--red);
+}
+
+.error-outline {
+    border-color: var(--red);
 }
 
 #name-blank {
@@ -272,7 +239,6 @@ button {
     main {
         display: flex;
         flex-direction: row;
-        /* gap: 10%; */
         gap: 8%;
     }
 
@@ -293,14 +259,39 @@ button {
 
     section {
         min-width: 20rem;
-        margin-inline: 3rem;
         margin-top: 22rem;
     }
-
-    .cvc-icon {
-        position: relative;
-        /* top: -8.5rem; */
-        bottom: 8.5rem;
-        left: 15rem
-    }
   }
+
+  /* Adjust text for responsive sizes */
+@media(min-width: 430px) {
+
+    .card-logo {
+        padding-bottom: 3.5rem;
+    }
+
+    .card-number {
+        font-size: 1.6rem;
+    }
+
+    .card-user {
+        gap: 8.8rem;
+    }
+}
+
+/* Adjust text for smaller screens */
+@media(max-width: 350px) {
+
+    .card-info {
+        font-size: 0.5rem;
+    }
+
+    .card-number {
+        font-size: 0.6rem;
+    }
+
+    .card-logo {
+        padding-bottom: 2.5rem;
+    }
+}
+

@@ -10,7 +10,6 @@ function Header() {
       <h1 className='sr-only'>Interactive Card Details</h1>
       <div className='card-container'>
         <img src={cardBack} alt="Back side of a credit card" className='card-back'></img>
-         <p className='cvc-icon'>000</p>
         </div>
         <div className='card-container-front'>
         <img src={cardFront} alt="Front side of a credit card" className='card-front'></img> 
