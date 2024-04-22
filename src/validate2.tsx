@@ -10,11 +10,10 @@ function validate(event: FormEvent) {
     const expDateYear: object = document.getElementById('exp-date-year')!;
     const cvc: object = document.getElementById('cvc')!;
 
-    const inputs = [name, number, expDate, expDateYear, cvc];
 
     interface object1 {
-        name: string,
-        value: string 
+        name?: string,
+        value?: string ,
     }
     
 
@@ -36,28 +35,34 @@ function validate(event: FormEvent) {
 
     function format(input: object1){
         const value = input.value!;
+        const name: string = input.name;
         if(value === ''){
             // blank(number);
         }else{
         if(/^\d+$/.test(value)){
             document.getElementById('error-format')?.classList.remove('error');
-            document.getElementById(input.name)?.classList.remove('error-outline');
+            document.getElementById(name)?.classList.remove('error-outline');
             document.getElementById('error-format')?.classList.add('visually-hidden');
         }else{
             document.getElementById('error-format')?.classList.remove('visually-hidden');
             document.getElementById('error-format')?.classList.add('error')
-            document.getElementById(input.name)?.classList.add('error-outline');
+            document.getElementById(name)?.classList.add('error-outline');
         }
       }
     }
 
     
+    const inputs = [name,  number, expDate, expDateYear, cvc];
+
    for( const element of inputs){
-    /* Not sure how to fix this error */
        blank(element);
    }
 
+
+
+
    format(number);
+
 
    /* if all checks are passed , load completed page */
    const matches = document.querySelectorAll('p.error');
