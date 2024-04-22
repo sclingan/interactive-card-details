@@ -35,7 +35,7 @@ function validate(event: FormEvent) {
 
     function format(input: object1){
         const value = input.value!;
-        const name: string = input.name;
+        const name: string = input.name!;
         if(value === ''){
             // blank(number);
         }else{
